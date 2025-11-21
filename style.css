@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light background */
+    color: #333;
+}
+
+h1, h2, h3 {
+    color:  #0096d6; /* A strong blue, often associated with SDG 4 */
+}
+
+/* --- Layout and Structure --- */
+.hero {
+    background: #0096d6;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-bg {
+    background-color: #e6f0ff; /* Light blue background for emphasis */
+}
+
+/* --- NGO Cards (using Flexbox for layout) --- */
+.ngo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.ngo-card {
+    flex: 1 1 calc(33% - 20px); /* Tries to fit 3 cards per row on larger screens */
+    min-width: 280px; /* Minimum width for small screens */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.ngo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ngo-card h4 {
+    color: #28a745; /* A secondary, 'growth' color */
+    margin-top: 0;
+}
+
+/* --- Footer and CTA --- */
+footer {
+    background-color: #0096d6;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.cta a {
+    color: #ffc107; /* A bright, attention-grabbing color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .ngo-card {
+        flex: 1 1 100%; /* Stacks cards on very small screens */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+}

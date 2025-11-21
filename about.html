@@ -1,0 +1,215 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDG 4 | Brainlee</title>
+
+  <style>
+    :root{
+      --accent: #0077b6;
+      --accent2: #ffd60a;
+      --dark: #03045e;
+      --muted: #5c677d;
+      --card-bg: #f9f9ff;
+      --maxw: 1000px;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--dark);
+      background:linear-gradient(180deg,#caf0f8 0%, #ade8f4 50%, #90e0ef 100%);
+    }
+
+    header{
+      background:var(--accent2);
+      border-bottom:3px solid var(--accent);
+      position:sticky;
+      top:0;
+      z-index:40;
+    }
+
+    .container{max-width:var(--maxw);margin:0 auto;padding:1rem}
+    .nav{display:flex;justify-content:space-between;align-items:center}
+    .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--dark)}
+
+    nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+    nav a{text-decoration:none;color:var(--dark);font-weight:600}
+    nav a:hover{color:white}
+
+    .hero{
+      padding:2rem 0;
+      text-align:center;
+    }
+    .hero h1{
+      font-size:clamp(1.6rem,2.6vw,2.4rem);
+      margin:0 0 .5rem;
+    }
+    .hero p{
+      color:var(--muted);
+      margin:0 auto;
+      max-width:620px;
+      line-height:1.5;
+    }
+
+    section{
+      padding:1.5rem 0;
+    }
+
+    .card{
+      background:var(--card-bg);
+      padding:1.25rem;
+      border-radius:12px;
+      margin-bottom:1rem;
+      box-shadow:0 6px 18px rgba(3,4,94,0.1);
+    }
+
+    h2, h3, h4{margin-top:0}
+
+    .highlight{
+      background:white;
+      border-left:5px solid var(--accent);
+      padding:1.25rem;
+      border-radius:12px;
+      margin-bottom:1rem;
+      box-shadow:0 6px 18px rgba(3,4,94,0.1);
+    }
+
+    ul{margin:0;padding-left:1.2rem;color:var(--muted)}
+
+    .ngo-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:1rem;
+      margin:1rem 0;
+    }
+
+    .ngo-card{
+      background:var(--card-bg);
+      padding:1rem;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(3,4,94,0.1);
+    }
+
+    .cta a{
+      font-weight:700;
+      color:var(--accent);
+      text-decoration:none;
+    }
+    .cta a:hover{
+      color:#0096d6;
+    }
+
+    footer{
+      padding:1rem 0;
+      margin-top:1.5rem;
+      border-top:3px solid var(--accent2);
+      background:var(--accent);
+      color:white;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>BRAINLEE</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subject.html">Subjects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>📚 SDG 4: Quality Education</h1>
+      <p>Ensuring inclusive and equitable quality education and promoting lifelong learning opportunities for all.</p>
+    </section>
+
+    <!-- MISSION -->
+    <section>
+      <div class="card">
+        <h2>Our Focus under SDG 17: Partnership for Impact</h2>
+        <p>Achieving Quality Education requires strong <b>partnerships</b> and a focus on those furthest behind.  
+        Through the power of <b>SDG 17</b>, our initiative targets critical gaps to build a digitally empowered society.</p>
+      </div>
+    </section>
+
+    <!-- RURAL REACH -->
+    <section>
+      <div class="highlight">
+        <h3>Connecting Rural Students 🌐</h3>
+        <p>The digital divide limits millions of rural students from quality learning. We aim to:</p>
+        <ul>
+          <li>Provide devices and affordable internet access.</li>
+          <li>Set up <b>Community Digital Learning Hubs</b>.</li>
+          <li>Create regional, curriculum-aligned digital content.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ADULT DIGITAL LITERACY -->
+    <section>
+      <div class="card">
+        <h3>Digital Literacy for Adults 📱</h3>
+        <p>Digital literacy is the new essential skill. Our programs help adults:</p>
+        <ul>
+          <li>Learn online safety, digital payments & financial tools.</li>
+          <li>Access skill-based vocational programs.</li>
+          <li>Join online certificate courses for lifelong learning.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section>
+      <div class="highlight">
+        <h2>🤝 Our Partners in Education (SDG 17)</h2>
+        <p>We collaborate with strong NGOs to bring education to underserved communities.</p>
+
+        <div class="ngo-list">
+          <div class="ngo-card">
+            <h4>Pratham</h4>
+            <p>Focus: Foundational literacy and numeracy using “Teaching at the Right Level”.</p>
+          </div>
+
+          <div class="ngo-card">
+            <h4>Akshaya Patra Foundation</h4>
+            <p>Focus: Nutritious mid-day meals to encourage attendance & learning.</p>
+          </div>
+
+          <div class="ngo-card">
+            <h4>S M Sehgal Foundation</h4>
+            <p>Focus: Digital tools & infrastructure development for rural schools.</p>
+          </div>
+        </div>
+
+        <p class="cta">Want to collaborate with us? <a href="contact.html">Contact us</a> for partnership opportunities.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <small>© 2025 Brainlee | SDG 4 & SDG 17 Initiative</small>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>  Brainlee   </title>
+  <meta name="description" content="Adopt a SDG campaign to support Goal 17: Partnership for the Goals. Join partners, NGOs and citizens to build collaboration." />
+
+  <style>
+    :root{
+      --accent: #0077b6;
+      --accent2: #ffd60a;
+      --dark: #03045e;
+      --muted: #5c677d;
+      --card-bg: #f9f9ff;
+      --maxw: 1000px;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--dark);
+      background:linear-gradient(180deg,#caf0f8 0%, #ade8f4 50%, #90e0ef 100%);
+    }
+
+    header{
+      background: var(--accent2);
+      color: var(--dark);
+      border-bottom: 3px solid var(--accent);
+      position:sticky;top:0;z-index:40;
+    }
+
+    .container{max-width:var(--maxw);margin:0 auto;padding:1rem}
+
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--dark);display:inline-block}
+
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+    nav a{text-decoration:none;color:var(--dark);font-weight:600}
+    nav a:hover{color:white}
+
+    .hero{
+      display:grid;grid-template-columns:1fr;gap:1.25rem;align-items:center;padding:2.25rem 0
+    }
+
+    .hero-content h1{
+      font-size:clamp(1.4rem,2.6vw,2.25rem);
+      margin:0 0 .5rem;
+    }
+    .hero-content p{
+      margin:0 0 1rem;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    .cta{display:flex;gap:.75rem;flex-wrap:wrap}
+
+
+    .btn{
+      padding:0.75rem 1.25rem;
+      border-radius:12px;
+      border:0;
+      font-weight:700;
+      cursor:pointer;
+      transition: all 0.28s ease;
+      font-size:1rem;
+    }
+
+    /* Primary Button */
+    .btn-primary{
+      background:var(--accent);
+      color:white;
+      box-shadow:0 4px 12px rgba(0,119,182,0.3);
+    }
+    .btn-primary:hover{
+      background:#0096d6;
+      transform:translateY(-3px) scale(1.03);
+      box-shadow:0 6px 18px rgba(0,119,182,0.45);
+    }
+
+    /* Secondary Button */
+    .btn-secondary{
+      background:transparent;
+      border:2px solid var(--accent);
+      color:var(--accent);
+      box-shadow:0 4px 12px rgba(0,119,182,0.2);
+    }
+    .btn-secondary:hover{
+      background:var(--accent);
+      color:white;
+      transform:translateY(-3px) scale(1.03);
+      box-shadow:0 6px 18px rgba(0,119,182,0.4);
+    }
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:1rem;
+    }
+
+    .card{
+      background:var(--card-bg);
+      padding:1rem;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(3,4,94,0.1);
+      
+    }
+
+    section{padding:1.25rem 0}
+    h2{margin:0 0 .5rem;color:var(--dark)}
+    p.lead{color:var(--muted)}
+
+    footer{
+      padding:1rem 0;
+      border-top:3px solid var(--accent2);
+      background:var(--accent);
+      color:white;
+      text-align:center;
+    }
+
+    @media (min-width:720px){
+      .hero{grid-template-columns:1fr 420px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>BRAINLEE</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subject.html">Subject</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Brainlee | FREE Quality Education </h1>
+        <p class="lead"> Availability of Free Study Materials for SSC Students .</p>
+
+        <div class="cta">
+          <button class="btn btn-primary">Start</button>
+          
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Thought OF The Day</h3>
+          <p style="color:var(--muted)">Education is the most powerful weapon which you can use to change the world </p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features">
+      <h2><b>Subjects</b></h2>
+      <div class="card-grid">
+        <div class="card"><strong>MATHS</strong></div>
+        <div class="card"><strong>SCIENCE</strong></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> BRAINLEE.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
