@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback | Brainlee</title>
+
+  <style>
+    :root{
+      --accent: #0077b6;
+      --accent2: #ffd60a;
+      --dark: #03045e;
+      --muted: #5c677d;
+      --card-bg: #f9f9ff;
+      --maxw: 1000px;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--dark);
+      background:linear-gradient(180deg,#caf0f8 0%, #ade8f4 50%, #90e0ef 100%);
+    }
+
+    header{
+      background: var(--accent2);
+      color: var(--dark);
+      border-bottom: 3px solid var(--accent);
+      position:sticky; top:0; z-index:40;
+    }
+
+    .container{max-width:var(--maxw);margin:0 auto;padding:1rem}
+
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--dark);display:inline-block}
+
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+    nav a{text-decoration:none;color:var(--dark);font-weight:600}
+    nav a:hover{color:white}
+
+    section{padding:1.25rem 0}
+    h1{margin:0 0 .5rem}
+    p.lead{color:var(--muted)}
+
+    .card{
+      background:var(--card-bg);
+      padding:1.25rem;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(3,4,94,0.1);
+    }
+
+    /* Buttons */
+    .btn{
+      padding:0.75rem 1.25rem;
+      border-radius:12px;
+      border:0;
+      font-weight:700;
+      cursor:pointer;
+      transition: all 0.28s ease;
+      font-size:1rem;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:white;
+      box-shadow:0 4px 12px rgba(0,119,182,0.3);
+    }
+    .btn-primary:hover{
+      background:#0096d6;
+      transform:translateY(-3px) scale(1.03);
+      box-shadow:0 6px 18px rgba(0,119,182,0.45);
+    }
+
+    /* Feedback Form */
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+    }
+
+    input, textarea, select{
+      width:100%;
+      padding:0.75rem;
+      border:2px solid #dde7f5;
+      border-radius:10px;
+      font-size:1rem;
+      resize:none;
+    }
+
+    input:focus, textarea:focus, select:focus{
+      outline:none;
+      border-color:var(--accent);
+      box-shadow:0 0 0 2px rgba(0,119,182,0.2);
+    }
+
+    footer{
+      padding:1rem 0;
+      border-top:3px solid var(--accent2);
+      background:var(--accent);
+      color:white;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>BRAINLEE</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subject.html">Subject</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h1>We Value Your Feedback</h1>
+      <p class="lead">Help us improve Brainlee! Share your experience, suggestions, or report an issue.</p>
+
+      <div class="card">
+        <form>
+          <!-- Name -->
+          <div>
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label>Your Email</label>
+            <input type="email" placeholder="Enter your email address" required>
+          </div>
+
+          <!-- Rating -->
+          <div>
+            <label>Rate Your Experience</label>
+            <select required>
+              <option value="">Select Rating</option>
+              <option>⭐ 1 - Poor</option>
+              <option>⭐⭐ 2 - Fair</option>
+              <option>⭐⭐⭐ 3 - Good</option>
+              <option>⭐⭐⭐⭐ 4 - Very Good</option>
+              <option>⭐⭐⭐⭐⭐ 5 - Excellent</option>
+            </select>
+          </div>
+
+          <!-- Feedback -->
+          <div>
+            <label>Your Feedback</label>
+            <textarea rows="5" placeholder="Write your feedback..." required></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button class="btn btn-primary" type="submit">Submit Feedback</button>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> BRAINLEE.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
